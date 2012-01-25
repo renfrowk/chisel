@@ -1,5 +1,4 @@
-Chisel
-David Zhou
+Chisel (forked from David Zhou)
 ==========
 
 USAGE
@@ -12,18 +11,14 @@ SAMPLE ENTRY
 ===========
 
 sample.markdown:
--------# start of file
-The First Line Contains the Title
-3/2/2009 <-- second line contains date. Must be in this format by default. Change via ENTRY_TIME_FORMAT setting.
-<a blank line separate title/date from post body>
-This is now the body of the post.  By default, the body is evaluated and parsed with markdown.
-Another line
+Title
+3-2-2009 <--  Must be in this format by default. Change via ENTRY_TIME_FORMAT setting.
 
-New paragraph
+Paragraph
 
-Another paragraph
--------# end of file
+Paragraph
 
+Paragraph
 
 ADDING STEPS
 ============
@@ -44,7 +39,7 @@ Example: SOURCE = "./blog/"
 DESTINATION:
 Location to place generated files.
 Must end in slash.
-Example: DESTINATION = "./explort/"
+Example: DESTINATION = "./export/"
 
 HOME_SHOW:
 Number of entries to show on homepage
@@ -81,7 +76,4 @@ FORMAT:
 Callable that takes in text and returns formatted
 text.
 Default: FORMAT = lambda text: markdown.markdown(text, ['footnotes',]) 
-
-
-
 

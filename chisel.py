@@ -1,18 +1,12 @@
 #!/usr/bin/python
 
-# Chisel
-# David Zhou
-# 
-# Requires:
-# jinja2
-
 import sys, re, time, os, codecs
 import jinja2, markdown
 
-#Settings
-SOURCE = "./blog/" #end with slash
-DESTINATION = "./export/" #end with slash
-HOME_SHOW = 15 #numer of entries to show on homepage
+# Settings
+SOURCE = "./posts/"
+DESTINATION = "./export/"
+HOME_SHOW = 15
 TEMPLATE_PATH = "./templates/"
 TEMPLATE_OPTIONS = {}
 TEMPLATES = {
@@ -21,11 +15,10 @@ TEMPLATES = {
     'archive': "archive.html",
 }
 TIME_FORMAT = "%B %d, %Y"
-ENTRY_TIME_FORMAT = "%m/%d/%Y"
-#FORMAT should be a callable that takes in text
-#and returns formatted text
+ENTRY_TIME_FORMAT = "%m-%d-%Y"
+
+# FORMAT should be a callable that takes in text and returns formatted text
 FORMAT = lambda text: markdown.markdown(text, ['footnotes',]) 
-#########
 
 STEPS = []
 
@@ -44,7 +37,7 @@ def get_tree(source):
             if name[0] == ".": continue
             path = os.path.join(root, name)
             f = open(path, "rU")
-            title = f.readline()
+            title = f.readline().rstrip()
             date = time.strptime(f.readline().strip(), ENTRY_TIME_FORMAT)
             year, month, day = date[:3]
             files.append({
@@ -81,7 +74,7 @@ def write_file(url, data):
 def generate_homepage(f, e):
     """Generate homepage"""
     template = e.get_template(TEMPLATES['home'])
-    write_file("index.html", template.render(entries=f[:HOME_SHOW]))
+    write_file("../index.html", template.render(entries=f[:HOME_SHOW]))
 
 @step
 def master_archive(f, e):
