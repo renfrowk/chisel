@@ -1,4 +1,4 @@
-Chisel (forked from David Zhou)
+Chisel
 ==========
 
 USAGE
@@ -13,8 +13,6 @@ SAMPLE ENTRY
 sample.markdown:
 Title
 3-2-2009 <--  Must be in this format by default. Change via ENTRY_TIME_FORMAT setting.
-
-Paragraph
 
 Paragraph
 
@@ -66,11 +64,11 @@ Example:
 
 TIME_FORMAT:
 Format of human readable timestamp.
-Default: "%B %d, %Y - %I:%M %p"
+Default: "%b %d, %Y - %I:%M %p"
 
 ENTRY_TIME_FORMAT:
 Format of date declaration in second line of posts
-Default: "%m/%d/%Y"
+Default: "%m-%d-%Y"
 
 FORMAT:
 Callable that takes in text and returns formatted
