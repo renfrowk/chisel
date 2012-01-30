@@ -14,7 +14,7 @@ TEMPLATES = {
     'detail': "detail.html",
     'archive': "archive.html",
 }
-TIME_FORMAT = "%B %d, %Y"
+TIME_FORMAT = "%b %d, %Y"
 ENTRY_TIME_FORMAT = "%m-%d-%Y"
 
 # FORMAT should be a callable that takes in text and returns formatted text
