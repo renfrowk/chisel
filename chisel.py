@@ -6,7 +6,7 @@ import jinja2, markdown
 # Settings
 SOURCE = "./posts/"
 DESTINATION = "./export/"
-HOME_SHOW = 15
+HOME_SHOW = 25
 TEMPLATE_PATH = "./templates/"
 TEMPLATE_OPTIONS = {}
 TEMPLATES = {

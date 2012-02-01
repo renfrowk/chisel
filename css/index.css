@@ -1,5 +1,5 @@
 #wrapper {
-   width: 500px;
+   width: 600px;
    margin-left: auto;
    margin-right: auto;
    font: 16px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -33,9 +33,9 @@ a:hover {
 }
 
 .post_date {
-   float: left;
-   margin-right: 10px;
+   float: right;
    color: #777;
+   font-family: Consolas, Monaco, "Courier New", monospace;
 }
 
 footer {

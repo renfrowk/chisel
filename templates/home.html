@@ -4,11 +4,11 @@
    <h2>Blog</h2>
     {% for entry in entries %}
         <div class="entry">
-            <div class="post_date">
-               {{ entry.pretty_date }}
-            </div>
             <div class="post_title">
                <a href="/{{ entry.url }}">{{ entry.title }}</a>
+            </div>
+            <div class="post_date">
+               {{ entry.pretty_date }}
             </div>
         </div>
         <br>
