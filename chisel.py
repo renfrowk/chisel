@@ -11,7 +11,7 @@ TEMPLATE_PATH = "./templates/"
 TEMPLATE_OPTIONS = {}
 TEMPLATES = {
     'home': "home.html",
-    'detail': "detail.html",
+    'post': "post.html",
     'archive': "archive.html",
 }
 TIME_FORMAT = "%b %d, %Y"
@@ -85,7 +85,7 @@ def master_archive(f, e):
 @step
 def detail_pages(f, e):
     """Generate detail pages of individual posts"""
-    template = e.get_template(TEMPLATES['detail'])
+    template = e.get_template(TEMPLATES['post'])
     for file in f:
         write_file(file['url'], template.render(entry=file))
 
